@@ -1,6 +1,6 @@
 # ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT
 没啥学术价值，但是看着好像还行
-
+博客：https://blog.csdn.net/weixin_43446161/article/details/106736586
 ## 运行
 
 编写环境：Matlab2015b

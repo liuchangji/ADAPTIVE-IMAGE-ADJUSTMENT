@@ -23,4 +23,19 @@ pointcounter.m 通道分数计算器，用于计算熵？好像是
 
 ![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/fish.png)
 
- 
+![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/1.PNG)
+![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/123123.png)
+![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/%E5%85%89%E5%B9%B3%E8%A1%A1.png)
+![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200520112057.png)
+![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200320183026.png)
+![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/%E6%8D%95%E8%8E%B75.PNG)
+
+
+
+![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/%E6%8D%95%E8%8E%B77.PNG)
+![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/%E6%8D%95%E8%8E%B76.PNG)
+
+![image](https://github.com/liuchangji/ADAPTIVE-IMAGE-COLOR-LEVEL-ADJUSTMENT/blob/master/results/水下.png)
+
+
+

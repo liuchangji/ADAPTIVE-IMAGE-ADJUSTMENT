@@ -48,44 +48,48 @@
 close all;
 clear;
 
-%¡ª¡ª¡ª¡ªÄ£Ê½¿ª¹Ø¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-ScienceMode=0;           %µ÷ÊÔÄ£Ê½¿ª¹Ø
-LightBalanceMode=1;      %¹âÆ½ºâ¿ª¹Ø£¬ÊÇ·ñÆôÓÃ¹âÕÕÆ½ºâ
-DarkChannelMode=0;       %°µÍ¨µÀÈ¥ÎíÄ£Ê½,Ã»Ê²Ã´ÓÃ,´¿Êô³¶µ­£¬¼ÓÉÏËûÎÒ¾ÍÊÇÏëÊÔÊÔ¶øÒÑ
+%â€”â€”â€”â€”æ¨¡å¼å¼€å…³â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+ScienceMode=0;           %è°ƒè¯•æ¨¡å¼å¼€å…³
+LightBalanceMode=1;      %å…‰å¹³è¡¡å¼€å…³ï¼Œæ˜¯å¦å¯ç”¨å…‰ç…§å¹³è¡¡
+DarkChannelMode=0;       %æš—é€šé“åŽ»é›¾æ¨¡å¼,æ²¡ä»€ä¹ˆç”¨,çº¯å±žæ‰¯æ·¡ï¼ŒåŠ ä¸Šä»–æˆ‘å°±æ˜¯æƒ³è¯•è¯•è€Œå·²
 
 
-%¡ª¡ª¡ª¡ª°µÍ¨µÀ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
+%â€”â€”â€”â€”æš—é€šé“â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
 w=0.5;
 minfilternum=3;
 
-%¡ª¡ª¡ª¹âÕÕ¾ùºâÄ£¿é¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-MutiScaleMode=0;         %¶à³ß¶È¾ùºâÄ£Ê½,ËÙ¶ÈÂý,Ã»ÓÃµÄ¼ÆËã·½Ê½£¬²»ÓÃ´ò¿ªÁË
-light_sen=100;            %ÓÃÓÚµ÷ÕûÂÛÎÄÖÐµÄc£¬light_sen ¹â³ß¶ÈÃô¸ÐÏµÊý£¬Ô½´ó¶Ô¹âÇ¿µÄÌáÈ¡Ô½Ï¸½Ú£¬¾í»ýºË°´ÕÕÍ¼Ïñ´óÐ¡·Ö³É¶àÉÙ¿é¡£Ð¡´ú±í¿¼ÂÇÈ«¾Ö¹â£¬Êµ¼ÊÉÏÈ¡Öµ´óÒÔºó£¬£¬ÔËËãËÙ¶ÈÒ²»á±ä¿ì                           
-AdaptiveEntropyMode=1;   %ìØ×ÔÊÊÓ¦Ä£Ê½£¬¶ÔÓÚÌØ±ðÀ¬»øµÄÕÕÆ¬£¨ÌØ±ðÌØ±ðºÚ»òÌØ±ðÌØ±ðÁÁ£¬»á¸ù¾ÝÆäìØ×Ô¶¯µ÷ÕûÆ½ºâÏµÊý£¬ÓÐÓÃ£¬¿ª×Å£©                        
-light_enhance=0.5;       %light_enhance£¬¹âÕÕÆ½ºâÇ¿¶ÈÏµÊý£¬Ô½´ó·´¶ø´ú±íÆ½ºâÇ¿¶ÈÔ½Èõ£¬Ò»°ãÔÚ0.4-0.6£¬ÄãÏÓËûÌ«Ç¿¾Í×Ô¼º¸Ä´óµã
+%â€”â€”â€”å…‰ç…§å‡è¡¡æ¨¡å—â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+MutiScaleMode=0;         %å¤šå°ºåº¦å‡è¡¡æ¨¡å¼,é€Ÿåº¦æ…¢,æ²¡ç”¨çš„è®¡ç®—æ–¹å¼ï¼Œä¸ç”¨æ‰“å¼€äº†
+light_sen=100;            %ç”¨äºŽè°ƒæ•´è®ºæ–‡ä¸­çš„cï¼Œlight_sen å…‰å°ºåº¦æ•æ„Ÿç³»æ•°ï¼Œè¶Šå¤§å¯¹å…‰å¼ºçš„æå–è¶Šç»†èŠ‚ï¼Œå·ç§¯æ ¸æŒ‰ç…§å›¾åƒå¤§å°åˆ†æˆå¤šå°‘å—ã€‚å°ä»£è¡¨è€ƒè™‘å…¨å±€å…‰ï¼Œå®žé™…ä¸Šå–å€¼å¤§ä»¥åŽï¼Œï¼Œè¿ç®—é€Ÿåº¦ä¹Ÿä¼šå˜å¿«                           
+AdaptiveEntropyMode=1;   %ç†µè‡ªé€‚åº”æ¨¡å¼ï¼Œå¯¹äºŽç‰¹åˆ«åžƒåœ¾çš„ç…§ç‰‡ï¼ˆç‰¹åˆ«ç‰¹åˆ«é»‘æˆ–ç‰¹åˆ«ç‰¹åˆ«äº®ï¼Œä¼šæ ¹æ®å…¶ç†µè‡ªåŠ¨è°ƒæ•´å¹³è¡¡ç³»æ•°ï¼Œæœ‰ç”¨ï¼Œå¼€ç€ï¼‰                        
+light_enhance=0.5;       %light_enhanceï¼Œå…‰ç…§å¹³è¡¡å¼ºåº¦ç³»æ•°ï¼Œè¶Šå¤§åè€Œä»£è¡¨å¹³è¡¡å¼ºåº¦è¶Šå¼±ï¼Œä¸€èˆ¬åœ¨0.4-0.6ï¼Œä½ å«Œä»–å¤ªå¼ºå°±è‡ªå·±æ”¹å¤§ç‚¹
 
-%½¨ÒéÐ¡Ò»µãÃô¸Ð³ß¶ÈÅäºÏ´óµÄÐÞÕý¹âÕÕÆ½ºâÇ¿¶È
+%å»ºè®®å°ä¸€ç‚¹æ•æ„Ÿå°ºåº¦é…åˆå¤§çš„ä¿®æ­£å…‰ç…§å¹³è¡¡å¼ºåº¦
 
 
 
-%¡ª¡ª¡ªÉ«½×µ÷ÕûÄ£¿é¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-ChannelBalanceMode=1;   %Í¨µÀ¾ùºâÄ£Ê½
-off_sen=1;              %¶ÔÓÚÌØ±ðÁÁ»òÕßÌØ±ð°µµÄÍ¼Æ¬£¬»á´æÔÚÆ«ÒÆÏµÊý£¬Æ«ÒÆÃô¸ÐÏµÊý£¬Õâ¸öÖµÔ½´ó£¬ÒªÇóÆ«ÒÆ¸üÐ¡£¬Õâ¸öÖµÔ½Ð¡£¬Ô½ÄÜ¸ÐÓ¦Ð¡µÄ±ãÒË£¬
-                        %0-1×óÓÒ°É£¬Ì«´óÁË»áÊ¹µÃÉÏÏÂ½ì¶¼ÊÇ0
+%â€”â€”â€”è‰²é˜¶è°ƒæ•´æ¨¡å—â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+ChannelBalanceMode=1;   %é€šé“å‡è¡¡æ¨¡å¼
+off_sen=1;              %å¯¹äºŽç‰¹åˆ«äº®æˆ–è€…ç‰¹åˆ«æš—çš„å›¾ç‰‡ï¼Œä¼šå­˜åœ¨åç§»ç³»æ•°ï¼Œåç§»æ•æ„Ÿç³»æ•°ï¼Œè¿™ä¸ªå€¼è¶Šå¤§ï¼Œè¦æ±‚åç§»æ›´å°ï¼Œè¿™ä¸ªå€¼è¶Šå°ï¼Œè¶Šèƒ½æ„Ÿåº”å°çš„ä¾¿å®œï¼Œ
+                        %0-1å·¦å³å§ï¼Œå¤ªå¤§äº†ä¼šä½¿å¾—ä¸Šä¸‹å±Šéƒ½æ˜¯0
                         
-off_size=2;          %Èç¹û´æÔÚÆ«ÒÆ£¬ÄÇÃ´ÒÆ¶¯´°¿ÚµÄ³Ì¶ÈÊÇ¶àÉÙ£¨0-2Ö®¼ä£¬Ì«´óÁË»áÒÆ³ý£©
-loss=2;                 %ÐèÒª¼¸±¶µÄÎ÷¸ñÂê£¬Õâ¸öÊýÔ½´ó±£ÁôµÄÊý¾Ý¾ÍÔ½¶à£¬Ô½Ð¡ÔöÇ¿Ð§¹ûÔ½Ç¿ÁÒ
-channel_sen=5;        %Í¨µÀ²»Æ½ºâÃô¸ÐÏµÊý£¬Ô½´ó¾Í¶ÔÆ«ÒÆÔ½Ãô¸Ð,0-10¶¼Ã»ÓÐÎÊÌâ£¬0´ú±í²»Ãô¸Ð£¬´ú±íÁËÔ½±£³ÖÖ÷Í¨µÀ
+off_size=2;          %å¦‚æžœå­˜åœ¨åç§»ï¼Œé‚£ä¹ˆç§»åŠ¨çª—å£çš„ç¨‹åº¦æ˜¯å¤šå°‘ï¼ˆ0-2ä¹‹é—´ï¼Œå¤ªå¤§äº†ä¼šç§»é™¤ï¼‰
+loss=2;                 %éœ€è¦å‡ å€çš„è¥¿æ ¼çŽ›ï¼Œè¿™ä¸ªæ•°è¶Šå¤§ä¿ç•™çš„æ•°æ®å°±è¶Šå¤šï¼Œè¶Šå°å¢žå¼ºæ•ˆæžœè¶Šå¼ºçƒˆ
+channel_sen=5;        %é€šé“ä¸å¹³è¡¡æ•æ„Ÿç³»æ•°ï¼Œè¶Šå¤§å°±å¯¹åç§»è¶Šæ•æ„Ÿ,0-10éƒ½æ²¡æœ‰é—®é¢˜ï¼Œ0ä»£è¡¨ä¸æ•æ„Ÿï¼Œä»£è¡¨äº†è¶Šä¿æŒä¸»é€šé“
 
-%¡ª¡ª¡ªÖ÷³ÌÐò¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-[f,p] = uigetfile('*.*','Ñ¡ÔñÍ¼ÏñÎÄ¼þ');
+%â€”â€”â€”ä¸»ç¨‹åºâ€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+[f,p] = uigetfile('*.*','é€‰æ‹©å›¾åƒæ–‡ä»¶');
 if f
     I=imread(strcat(p,f));
 end
 
+if ndims(I) == 2
+   I = repmat(I,[1,1,3]);%å°†å•é€šé“å›¾ç‰‡è½¬æ¢ä¸ºä¸‰é€šé“å›¾ç‰‡
+end
+
 input = I;
-tic;   %¼ÆÊ±Æ÷¿ªÊ¼
+tic;   %è®¡æ—¶å™¨å¼€å§‹
 
 I = adaptiveadj (I,off_sen,off_size,loss,channel_sen,ScienceMode,ChannelBalanceMode);
 afterAdAdj=I;
@@ -97,12 +101,12 @@ end
 if LightBalanceMode==1 
     I=lightbalance(I,light_sen,light_enhance,ScienceMode,MutiScaleMode,AdaptiveEntropyMode);
     afterLigBal=I;
-    mytimer1=toc;%¼ÆÊ±Æ÷
+    mytimer1=toc;%è®¡æ—¶å™¨
     disp(mytimer1);
     figure;
     imshow([input, afterLigBal]);
 else
-    mytimer1=toc;%¼ÆÊ±Æ÷
+    mytimer1=toc;%è®¡æ—¶å™¨
     disp(mytimer1);
 end
 
@@ -111,36 +115,36 @@ if DarkChannelMode==1;
     afterdehaze=darkchannel_hazeremove(I,w,minfilternum,ScienceMode);
     figure;
     imshow(afterdehaze);
-    title('È¥Îíºó')
+    title('åŽ»é›¾åŽ')
 end
 
 
 
 
-%¡ª¡ª¡ª¡ª³õÊ¼²ÎÊý±¸·Ý¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
+%â€”â€”â€”â€”åˆå§‹å‚æ•°å¤‡ä»½â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 %{
-%¡ª¡ª¡ª¹âÕÕ¾ùºâÄ£¿é¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-MutiScaleMode=0;         %¶à³ß¶È¾ùºâÄ£Ê½,ËÙ¶ÈÂý,Ã»ÓÃµÄ¼ÆËã·½Ê½£¬²»ÓÃ´ò¿ªÁË
-light_sen=20;            %light_sen ¹â³ß¶ÈÃô¸ÐÏµÊý£¬Ô½´ó¶Ô¹âÇ¿µÄÌáÈ¡Ô½Ï¸½Ú£¬Ð¡´ú±í¿¼ÂÇÈ«¾Ö¹â£¬                           %¿ÉÒÔÀí½âÎª½«Í¼Æ¬²Ã³É¶àÉÙ·ÝÈ¥ÌáÈ¡¹âÕÕ£¬½¨ÒéÈ¡8-12
-AdaptiveEntropyMode=1;   %ìØ×ÔÊÊÓ¦Ä£Ê½£¬¶ÔÓÚÌØ±ðÀ¬»øµÄÕÕÆ¬£¨ÌØ±ðÌØ±ðºÚ»òÌØ±ðÌØ±ðÁÁ£¬»á¸ù¾ÝÆäìØ×Ô¶¯µ÷ÕûÆ½ºâÏµÊý£¬ÓÐÓÃ£¬¿ª×Å£©                        
-light_enhance=0.45;       %light_enhance£¬¹âÕÕÆ½ºâÇ¿¶ÈÏµÊý£¬Ô½´ó·´¶ø´ú±íÆ½ºâÇ¿¶ÈÔ½Èõ£¬Ò»°ãÔÚ0.4-0.45£¬ÄãÏÓËûÌ«Ç¿¾Í×Ô¼º¸Ä´óµã
+%â€”â€”â€”å…‰ç…§å‡è¡¡æ¨¡å—â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+MutiScaleMode=0;         %å¤šå°ºåº¦å‡è¡¡æ¨¡å¼,é€Ÿåº¦æ…¢,æ²¡ç”¨çš„è®¡ç®—æ–¹å¼ï¼Œä¸ç”¨æ‰“å¼€äº†
+light_sen=20;            %light_sen å…‰å°ºåº¦æ•æ„Ÿç³»æ•°ï¼Œè¶Šå¤§å¯¹å…‰å¼ºçš„æå–è¶Šç»†èŠ‚ï¼Œå°ä»£è¡¨è€ƒè™‘å…¨å±€å…‰ï¼Œ                           %å¯ä»¥ç†è§£ä¸ºå°†å›¾ç‰‡è£æˆå¤šå°‘ä»½åŽ»æå–å…‰ç…§ï¼Œå»ºè®®å–8-12
+AdaptiveEntropyMode=1;   %ç†µè‡ªé€‚åº”æ¨¡å¼ï¼Œå¯¹äºŽç‰¹åˆ«åžƒåœ¾çš„ç…§ç‰‡ï¼ˆç‰¹åˆ«ç‰¹åˆ«é»‘æˆ–ç‰¹åˆ«ç‰¹åˆ«äº®ï¼Œä¼šæ ¹æ®å…¶ç†µè‡ªåŠ¨è°ƒæ•´å¹³è¡¡ç³»æ•°ï¼Œæœ‰ç”¨ï¼Œå¼€ç€ï¼‰                        
+light_enhance=0.45;       %light_enhanceï¼Œå…‰ç…§å¹³è¡¡å¼ºåº¦ç³»æ•°ï¼Œè¶Šå¤§åè€Œä»£è¡¨å¹³è¡¡å¼ºåº¦è¶Šå¼±ï¼Œä¸€èˆ¬åœ¨0.4-0.45ï¼Œä½ å«Œä»–å¤ªå¼ºå°±è‡ªå·±æ”¹å¤§ç‚¹
 
-%½¨ÒéÐ¡Ò»µãÃô¸Ð³ß¶ÈÅäºÏ´óµÄÐÞÕý¹âÕÕÆ½ºâÇ¿¶È
+%å»ºè®®å°ä¸€ç‚¹æ•æ„Ÿå°ºåº¦é…åˆå¤§çš„ä¿®æ­£å…‰ç…§å¹³è¡¡å¼ºåº¦
 
-%¡ª¡ª¡ªÉ«½×µ÷ÕûÄ£¿é¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-ChannelBalanceMode=1;   %Í¨µÀ¾ùºâÄ£Ê½
-off_sen=1;              %¶ÔÓÚÌØ±ðÁÁ»òÕßÌØ±ð°µµÄÍ¼Æ¬£¬»á´æÔÚÆ«ÒÆÏµÊý£¬Æ«ÒÆÃô¸ÐÏµÊý£¬Õâ¸öÖµÔ½´ó£¬ÒªÇóÆ«ÒÆ¸üÐ¡£¬Õâ¸öÖµÔ½Ð¡£¬Ô½ÄÜ¸ÐÓ¦Ð¡µÄ±ãÒË
-off_size=0.75;          %Èç¹û´æÔÚÆ«ÒÆ£¬ÄÇÃ´ÒÆ¶¯´°¿ÚµÄ³Ì¶ÈÊÇ¶àÉÙ
-loss=2;                 %ÐèÒª¼¸±¶µÄÎ÷¸ñÂê£¬Õâ¸öÊýÔ½´ó±£ÁôµÄÊý¾Ý¾ÍÔ½¶à£¬Ô½Ð¡ÔöÇ¿Ð§¹ûÔ½Ç¿ÁÒ
-channel_sen=1.5;        %Í¨µÀ²»Æ½ºâÃô¸ÐÏµÊý£¬Ô½´ó¾Í¶ÔÆ«ÒÆÔ½Ãô¸Ð,1´ú±íÕý³£Öµ£¬0´ú±í²»Ãô¸Ð£¬´ú±íÁËÔ½±£³ÖÖ÷Í¨µÀ
+%â€”â€”â€”è‰²é˜¶è°ƒæ•´æ¨¡å—â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+ChannelBalanceMode=1;   %é€šé“å‡è¡¡æ¨¡å¼
+off_sen=1;              %å¯¹äºŽç‰¹åˆ«äº®æˆ–è€…ç‰¹åˆ«æš—çš„å›¾ç‰‡ï¼Œä¼šå­˜åœ¨åç§»ç³»æ•°ï¼Œåç§»æ•æ„Ÿç³»æ•°ï¼Œè¿™ä¸ªå€¼è¶Šå¤§ï¼Œè¦æ±‚åç§»æ›´å°ï¼Œè¿™ä¸ªå€¼è¶Šå°ï¼Œè¶Šèƒ½æ„Ÿåº”å°çš„ä¾¿å®œ
+off_size=0.75;          %å¦‚æžœå­˜åœ¨åç§»ï¼Œé‚£ä¹ˆç§»åŠ¨çª—å£çš„ç¨‹åº¦æ˜¯å¤šå°‘
+loss=2;                 %éœ€è¦å‡ å€çš„è¥¿æ ¼çŽ›ï¼Œè¿™ä¸ªæ•°è¶Šå¤§ä¿ç•™çš„æ•°æ®å°±è¶Šå¤šï¼Œè¶Šå°å¢žå¼ºæ•ˆæžœè¶Šå¼ºçƒˆ
+channel_sen=1.5;        %é€šé“ä¸å¹³è¡¡æ•æ„Ÿç³»æ•°ï¼Œè¶Šå¤§å°±å¯¹åç§»è¶Šæ•æ„Ÿ,1ä»£è¡¨æ­£å¸¸å€¼ï¼Œ0ä»£è¡¨ä¸æ•æ„Ÿï¼Œä»£è¡¨äº†è¶Šä¿æŒä¸»é€šé“
 
 %}
-%¡ª¡ª¡ªÃ»ÁË¡ª¡ª¡ª¡ª¡ª
+%â€”â€”â€”æ²¡äº†â€”â€”â€”â€”â€”
 
 
 
-%(©b-©b)¤Ä¥í ¸É±­~-bilibili¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-% CIOMP Í¼Ïñ²¿ 
+%(ã‚œ-ã‚œ)ã¤ãƒ­ å¹²æ¯~-bilibiliâ€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+% CIOMP å›¾åƒéƒ¨ 
 
 
 
